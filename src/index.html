@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Image Comparison using Resemble.js</title>
+    <meta name="description" content="Compare images using Resemble.js." />
+    <meta property="og:title" content="Image Comparison using Resemble.js" />
+    <meta
+      property="og:description"
+      content="Compare images using Resemble.js."
+    />
+    <link href="styles.css" rel="stylesheet" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/resemblejs/resemble.min.js"
+      async
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/amcharts/3.21.15/plugins/export/libs/FileSaver.js/FileSaver.min.js"></script>
+  </head>
+  <body class="bg-gray-800 text-white">
+    <header class="text-center py-6 mb-8 bg-gray-900 shadow">
+      <h1 class="text-3xl font-bold">Image Comparison Tool</h1>
+    </header>
+    <div id="spinner" class="hidden">Loading...</div>
+
+    <main class="container mx-auto px-4">
+      <div class="flex justify-center mb-4 space-x-4">
+        <label for="image-input" class="button bg-blue-600">
+          Select Images
+          <input
+            type="file"
+            id="image-input"
+            accept="image/*"
+            multiple
+            class="hidden"
+            aria-label="Select Images"
+          />
+        </label>
+        <button class="button bg-green-600" onclick="compareImages()">
+          Compare
+        </button>
+        <button id="stop-button" class="button bg-red-600" onclick="">
+          Stop Compare
+        </button>
+        <input
+          type="number"
+          id="threshold-input"
+          class="input"
+          min="0"
+          max="100"
+          value="50"
+          aria-label="Threshold Input"
+        />
+        <button
+          id="comparison-again"
+          class="button bg-purple-600"
+          onclick="startComparisonAgain()"
+        >
+          Compare Again
+        </button>
+      </div>
+
+      <div class="flex justify-center mb-4 space-x-4">
+        <p id="status-text" class="status-text"></p>
+      </div>
+      <div class="flex justify-center mb-4 space-x-4">
+        <a
+          href="#"
+          id="download-link"
+          class="button bg-red-600 hidden"
+          download="image_comparison.zip"
+          >Download Zip File</a
+        >
+      </div>
+
+      <section>
+        <ul
+          id="image-container"
+          role="list"
+          class="grid grid-cols-4 gap-6"
+        ></ul>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>
