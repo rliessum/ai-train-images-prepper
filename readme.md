@@ -1,24 +1,26 @@
 # Image Comparison and Processing Tool for AI Training
 
-This is a JavaScript-based web browser tool designed to streamline the process of comparing and processing images. It is especially beneficial when preparing datasets for artificial intelligence training.
+The Image Comparison and Processing Tool is a JavaScript-based web browser application designed to streamline the image comparison and processing process, particularly for preparing datasets for artificial intelligence (AI) training.
 
-## Features
+## Key Features
 
-- Compare images side by side
-- Process images using various algorithms
-- Prepare well-structured image datasets for efficient AI training
+- Side-by-side image comparison
+- Automatic validation of image size (512x512)
+- Image similarity analysis to enhance training results
+- Image compression with convenient download option
+- Generation of well-structured image datasets for efficient AI training
 
 ## Prerequisites
 
-Before you begin, ensure you have met the following requirements:
+Before getting started, ensure that you have the following requirements:
 
-- You have installed the latest version of Node.js
+- Latest version of Node.js installed on your system
 
 ## Installation 
 
 To install the Image Comparison and Processing Tool, follow these steps:
 
-1. Clone the repo:
+1. Clone the repository:
 git clone https://github.com/rliessum/ai-train-images-prepper.git
 2. Navigate into the project directory:
 cd image-comparison-tool
